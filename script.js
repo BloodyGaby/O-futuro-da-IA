@@ -37,7 +37,7 @@ const perguntas = [
         enunciado:
         "4. O que é IA generativa?",
 
-        alternativas:[v
+        alternativas:[
             "Um tipo de inteligência artificial que cria novos dados, como texto, imagens ou música." ,
              "Um tipo de inteligência artificial que apenas analisa e classifica dados existentes."
         ]
