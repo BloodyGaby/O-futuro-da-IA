@@ -34,10 +34,20 @@ body{
   height:200px;
   width:400px;
   padding:5px;
-  margin-bottom:200px;
+  margin-bottom:150px;
   margin-left:auto;
   margin-right:auto;
   text-align: center;
+}
+
+.botaoUm{
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.botaoDois{
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .rodape {
