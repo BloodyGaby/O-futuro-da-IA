@@ -5,6 +5,7 @@ body{
 .cabecalho{
   margin-top:0;
   margin-left:auto;
+  margin-right: auto;
   width:100%;
  height:180px;
   background-color: #000000;
