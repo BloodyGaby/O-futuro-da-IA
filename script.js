@@ -69,4 +69,4 @@ const perguntas = [
         }
     }
 
-    mostraPergutna();
+    mostraPergunta();
