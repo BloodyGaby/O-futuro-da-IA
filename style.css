@@ -40,6 +40,17 @@ body{
   text-align: center;
 }
 
+caixa-perguntas{
+   background-color:#786076;
+  margin-top:100px;
+  height:200px;
+  width:400px;
+  padding:5px;
+  margin-bottom:150px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
 .rodape {
   display: flex;
   justify-content: space-between;
