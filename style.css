@@ -40,16 +40,6 @@ body{
   text-align: center;
 }
 
-.botaoUm{
-  margin-right: 40px;
-  margin-left: 0;
-}
-
-.botaoDois{
-  margin-right: 0;
-  margin-left: auto;
-}
-
 .rodape {
   display: flex;
   justify-content: space-between;
