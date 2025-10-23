@@ -39,7 +39,17 @@ body{
   margin-right:auto;
   text-align: center;
 }
-
+.caixa-principal{
+  background-color:#786076;
+  margin-top:100px;
+  height:200px;
+  width:200px;
+  padding:5px;
+  margin-bottom:150px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center; 
+}
 .caixa-perguntas{
    background-color:#786076;
   margin-top:100px;
