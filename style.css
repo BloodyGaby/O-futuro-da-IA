@@ -14,24 +14,31 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-main {
-  padding: 20px;
+.caixa-principal {
+    background-color: var(--primary);
+    width: 90%;
+    text-align: center;
+    padding: 20px;
 }
 
-section {
-  margin-bottom: 20px;
-  background-color: #fa94a3;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: #dda0dd;
+h1 {
+    color: var(--highlight);
 }
 
-section p {
-  line-height: 1.6;
-  text-align: justify;
-  font-size: 1.05em;
-  margin-bottom: 12px;
+button {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
 }
+
+button:hover {
+    background-color: var(--highlight);
+    color: var(--primary);
+}
+
 
 .rodape {
  display: flex;
