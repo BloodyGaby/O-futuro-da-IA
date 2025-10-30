@@ -42,8 +42,7 @@ const perguntas = [
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = 
-    "A inteligência Artificial (IA) é o futuro da humanidade, trazendo grandes inovações e novas tecnologias. " +
-    "Entretanto, a IA é uma caixa de surpresas — ainda há algumas pendências a serem descobertas.";
+    "A inteligência Artificial(IA) é o futuro da humanidade, trazendo grandes inovações e novas tecnologias. Entretanto, a IA é uma caixa de surpresas, ainda há algumas pendências a serem descobertas. " 
 
 function mostraPergunta() {
     // Se acabou as perguntas, mostra o resultado final
