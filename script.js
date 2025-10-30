@@ -54,7 +54,8 @@ const perguntas = [
 ]
   let atual = 0;
 let perguntaAtual;
-let historiaFinal = "";
+let historiaFinal = "A inteligência Artificial (ia) é o futuro da humanidade, trazendo grandes inovações e novas Tecnologias"
+    "Entretanto, a ia é iuma caixa de surpresas, ainda há algumas pendencias a serem descobertas. " ;
 
 function mostraPergunta() {
     perguntaAtual = perguntas[atual];
