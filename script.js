@@ -6,78 +6,82 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        
-        enunciado:
-        "1. Qual foi a primeira IA a ser utilizada? ",
-
-        alternativas:[
-            "Alexa",
-             "Logic Theorist"
-        ]
+        enunciado: "1. Qual foi a primeira IA a ser utilizada?",
+        alternativas: ["Alexa", "Logic Theorist"]
     },
     {
-        enunciado:
-        "2.Qual dos seguintes é um exemplo de aplicação de IA no dia a dia",
-
-        alternativas:[
+        enunciado: "2. Qual dos seguintes é um exemplo de aplicação de IA no dia a dia?",
+        alternativas: [
             "Apenas jogos de computador complexos.",
-             "Assistentes virtuais, como a Siri ou a Alexa, e sistemas de recomendação da Netflix"
+            "Assistentes virtuais, como a Siri ou a Alexa, e sistemas de recomendação da Netflix"
         ]
     },
     {
-        enunciado:
-        "3.Qual é o principal objetivo do aprendizado de máquina (machine learning)?",
-
-        alternativas:[
+        enunciado: "3. Qual é o principal objetivo do aprendizado de máquina (machine learning)?",
+        alternativas: [
             "Apenas criar bancos de dados e armazenar informações de forma organizada.",
-             "Fazer com que os computadores aprendam a partir de dados sem serem explicitamente programados para cada tarefa."
+            "Fazer com que os computadores aprendam a partir de dados sem serem explicitamente programados para cada tarefa."
         ]
     },
     {
-        enunciado:
-        "4. O que é IA generativa?",
-
-        alternativas:[
-            "Um tipo de inteligência artificial que cria novos dados, como texto, imagens ou música." ,
-             "Um tipo de inteligência artificial que apenas analisa e classifica dados existentes."
+        enunciado: "4. O que é IA generativa?",
+        alternativas: [
+            "Um tipo de inteligência artificial que cria novos dados, como texto, imagens ou música.",
+            "Um tipo de inteligência artificial que apenas analisa e classifica dados existentes."
         ]
     },
     {
-        enunciado:
-        "5. O que se espera sobre os modelos de linguagem no futuro próximo?",
-
-        alternativas:[
-            "Serão mais eficientes, personalizados e com menor consumo de energia",
-             "Serão sempre maiores, mais lentos e inacessíveis ao público geral"
+        enunciado: "5. O que se espera sobre os modelos de linguagem no futuro próximo?",
+        alternativas: [
+            "Serão mais eficientes, personalizados e com menor consumo de energia.",
+            "Serão sempre maiores, mais lentos e inacessíveis ao público geral."
         ]
-    },
-]
-  let atual = 0;
+    }
+];
+
+let atual = 0;
 let perguntaAtual;
-let historiaFinal = "A inteligência Artificial (ia) é o futuro da humanidade, trazendo grandes inovações e novas Tecnologias"
-    "Entretanto, a ia é iuma caixa de surpresas, ainda há algumas pendencias a serem descobertas. " ;
+let historiaFinal = 
+    "A inteligência Artificial (IA) é o futuro da humanidade, trazendo grandes inovações e novas tecnologias. " +
+    "Entretanto, a IA é uma caixa de surpresas — ainda há algumas pendências a serem descobertas.";
 
 function mostraPergunta() {
+    // Se acabou as perguntas, mostra o resultado final
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+
+    // Limpa alternativas antigas
+    caixaAlternativas.innerHTML = "";
+
+    // Mostra alternativas novas
     mostraAlternativas();
 }
 
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.textContent = alternativa;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes;
-    historiaFinal = afirmacoes;
+function respostaSelecionada(opcaoSelecionada) {
+    console.log("Você escolheu:", opcaoSelecionada);
     atual++;
     mostraPergunta();
 }
 
-mostraPergunta();
+function mostraResultado() {
+    caixaPerguntas.textContent = "Fim do questionário!";
+    caixaAlternativas.innerHTML = "";
+    textoResultado.textContent = historiaFinal;
+    caixaResultado.style.display = "block";
+}
 
+mostraPergunta();
